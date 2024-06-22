@@ -21,6 +21,6 @@ jobs:
 
       - name: Build and push the Docker image
         run: |
-          docker build scraper --file Dockerfile -t registry.jellyfix.net/gorothprime/readarr-metadata-scraper:latest -t registry.jellyfix.net/gorothprime/readarr-metadata-scraper:${{ github.sha }}
+          docker build scraper --file scraper/Dockerfile -t registry.jellyfix.net/gorothprime/readarr-metadata-scraper:latest -t registry.jellyfix.net/gorothprime/readarr-metadata-scraper:${{ github.sha }}
           docker push registry.jellyfix.net/gorothprime/readarr-metadata-scraper:${{ github.sha }}
           docker push registry.jellyfix.net/gorothprime/readarr-metadata-scraper:latest
